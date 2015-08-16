@@ -1,0 +1,23 @@
+{
+  "name": "radial-progress",
+  "version": "1.0.0",
+  "description": "JS only Radial Progress bar for client-side rendering progress",
+  "main": "radial-progress.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"build": "uglifyjs --compress --mangle --screw-ie8 --o radial-progress.min.js radial-progress.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nelsyeung/radial-progress.git"
+  },
+  "author": "Nelson Yeung <nelsyeung@icloud.com> (http://nelsyeung.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nelsyeung/radial-progress/issues"
+  },
+  "homepage": "https://github.com/nelsyeung/radial-progress#readme",
+  "devDependencies": {
+    "uglify-js": "^2.4.24"
+  }
+}

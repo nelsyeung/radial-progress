@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		body {
+			text-align: center;
+		}
+
+		h1 {
+			font: 2.5em sans-serif;
+			line-height: 1.2em;
+			color: #CCC;
+			text-shadow: 0px 1px #FFF;
+		}
+
+		button {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			margin: auto;
+			background-color: #0095DD;
+			border: 0;
+			border-radius: 50%;
+			box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+			font-size: 0.8em;
+			color: #FFF;
+			cursor: pointer;
+			transition: all 0.5s;
+		}
+
+		button:hover {
+			background-color: #00A6EE;
+			box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+		}
+	</style>
+</head>
+
+<body>
+	<h1>JS only<br>Radial Progress bar</h1>
+	<button onclick="createProgress()">Click me!</button>
+	<script src="radial-progress.js"></script>
+	<script>
+		function createProgress() {
+			var progress = new RadialProgress(160, 10, '#0095DD', '#FFF', '#000', 10);
+
+			setTimeout(function() {
+				progress.setProgress(50, 0.5);
+			}, 1000);
+
+			setTimeout(function() {
+				progress.setProgress(60, 0.5);
+			}, 3000);
+
+			setTimeout(function() {
+				progress.setProgress(80, 0.5);
+			}, 5000);
+
+			setTimeout(function() {
+				progress.setProgress(100, 0.5);
+			}, 7000);
+		}
+	</script>
+</body>
+</html>
